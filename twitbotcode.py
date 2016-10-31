@@ -5,15 +5,16 @@ Let's make a Twitter bot!
 This was a fun exercise in using the Twitter API + fiddling with strings in Python.
 
 This will fetch roughly a day's worth of BuzzFeed headlines from their Twitter, 
-look for instances of 'People ___ ___ ___' phrases, and then tweet them out.
+look for instances of tweetable 'People ___ ___ ___' phrases, and then tweet them out.
 
 After the tweets are downloaded and converted to a single text string, 
-the peopleFinder function iterates over the string and settles on the last incidence of 'People', 
+the peopleFinder function iterates over the string and settles on the last incidence of a tweetable 'People' phrase, 
 before counting spaces in order to nab the following three words as well.
 
 tweetTruncate will then remove that incidence of a 'people phrase' along with the rest of the string past that.
-Running peopleFinder again will then return the next-to-last incidence of a tweetable phrase.
+Running peopleFinder again will then return the next-to-last incidence of a tweetable phrase, and so on.
 A while loop is used to repeat this operation until the entire string's tweetable phrases have been extracted and tweeted.
+
 '''
 import tweepy
 import time
