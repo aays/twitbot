@@ -58,7 +58,6 @@ def peopleFinder(tweet_string):
 def tweetTruncate(tweet_string):
     substr = ''
     i1 = 0
-    i2 = 0
     final_tweet = ''
     for index in range(len(tweet_string)):
         if tweet_string[index:index+6] == 'People':
