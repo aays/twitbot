@@ -17,7 +17,7 @@ A while loop is used to repeat this operation until the entire string's tweetabl
 
 '''
 import tweepy
-import time
+import string
 
 CONSUMER_KEY = '##########################################'
 CONSUMER_SECRET = '##########################################'
@@ -32,8 +32,6 @@ api = tweepy.API(auth)
 mostrecenttweet = api.user_timeline('buzzfeed', count = 42)
 # for tweet in mostrecenttweet:
 #     print(tweet.text)
-
-import string
 
 def peopleFinder(tweet_string):
     the_spaces = 0
