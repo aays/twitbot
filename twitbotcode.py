@@ -33,6 +33,8 @@ mostrecenttweet = api.user_timeline('buzzfeed', count = 42)
 # for tweet in mostrecenttweet:
 #     print(tweet.text)
 
+import string
+
 def peopleFinder(tweet_string):
     the_spaces = 0
     substr = ''
@@ -52,7 +54,7 @@ def peopleFinder(tweet_string):
             else:
                 continue
     final_tweet = substr[0:i2]
-    final_tweet = final_tweet.title()
+    final_tweet = string.capwords(final_tweet)
     return(final_tweet)
     
 def tweetTruncate(tweet_string):
